@@ -1,0 +1,269 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(9,9,121);
+    background: linear-gradient(180deg, rgba(9,9,121,1) 14%, rgba(0,212,255,1) 98%);
+    min-height: 100vh;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+body, #login-section, form, header#session-header, #warning-notif, #thanks-notif, .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-field, .course-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+/*#region LOGIN PAGE*/
+form#login-form, .summary-form {
+    /* glass morphism effect by : https://hype4.academy/tools/glassmorphism-generator" */
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 3rem;
+    gap: 3rem;
+}
+
+#target {
+    height: auto;
+}
+
+header#session-header { height: 5vh; background-color: rgb(105, 108, 140); width: 100vw;}
+
+#login-section { height: 95vh; }
+
+#login-title { font-size: 3rem; margin: 0;}
+
+label:not(.fb-form) {
+    font-size: 1.5rem;
+    padding-right: 0.8rem;
+    border: 0;
+    border-radius: 20px;
+}
+
+button {
+    font-size: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    height: 2.5rem;
+    width: 60%;
+}
+
+button:hover {
+    background: rgb(128, 128, 128);
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+input {
+    height: 18px;
+    width: auto;
+}
+
+select {
+    height: 25px;
+}
+
+#warning-notif, #thanks-notif {
+    color: white;
+    height: 4vh;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    margin: 0;
+}
+
+#warning-notif {
+    background-color: rgb(69, 11, 2);
+}
+
+/*#endregion LOGIN PAGE*/
+
+/*#region FEEDBACK PAGE*/
+.feedback-form {
+    /* glass morphism effect by : https://hype4.academy/tools/glassmorphism-generator" */
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 2vh auto;
+}
+
+.feedback-form, #name, #form-header, .options, .year-radio, .year-radio div, .course > div, .email-section, .feedback-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form.feedback {
+    width: 98%;
+    padding: 1rem 0;
+}
+
+.feedback-section {
+    width: 100%;
+    justify-content: start;
+}
+
+.course, .section, .prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 12px;
+}
+
+section.feedback-form {
+    justify-content: start;
+    gap: 28px;
+    padding: 0 3rem;
+}
+
+.course-section, .bottom-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 28px;
+}
+
+.accent {
+    width: 2%;
+    height: 100%;
+    background-color: darkcyan;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#name, .options {gap: 20px;}
+
+.year-radio, .year-radio div, .feedback-field, .item-one,  .email-section {
+    gap: 10px;
+}
+
+.submit-form {
+    width: 100%;
+}
+
+input[type=submit] {
+    font-size: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    height: 2.5rem;
+    width: 40%;
+}
+
+input[type=submit]:hover {
+    background: rgb(128, 128, 128);
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.logout:hover {
+    cursor: pointer;
+    background-color: rgb(173, 75, 75);
+}
+
+.red-error {
+    background-color: #b90e0a; 
+    color: white;
+    padding: 0.15rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+.light {
+    font-weight: 200;
+}
+
+#form-header {
+    background-color: black;
+    height: 10vh;
+    margin: 0;
+    width: 100vw;
+}
+
+.form-content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.user-info {
+    width: 90%;
+}
+
+#logoutbtn {
+    width: 8%;
+}
+
+#logoutbtn > button {
+    background-color: maroon;
+}
+
+textarea {
+    resize: none;
+}
+
+/*#endregion FORM PAGE*/
+
+/*#region SUMMARY PAGE*/
+
+#thanks-notif {
+    background-color: rgb(2, 69, 11);
+    height: auto;
+    width: 30vw;
+    margin: 30px 0;
+    padding: 20px 30px;
+}
+
+.back:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+/*#endregion SUMMARY PAGE*/
+
+
+/*#region MEDIA QUERIES*/
+@media (max-width: 496px) {
+    #login-section  { margin: 0 2rem; }
+}
+
+@media (max-width: 1300px) {
+    image {width: 20% !important;}
+}
+
+@media (min-width: 360px) {
+    #thanks-notif {
+        width: 40vw;
+    }
+}
+/*#endregion MEDIA QUERIES*/
